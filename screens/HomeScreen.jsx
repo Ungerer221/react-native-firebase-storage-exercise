@@ -4,7 +4,7 @@ import React from 'react'
 const HomeScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
-        <Pressable onPress={() => navigation.navigate("Add")}>
+        <Pressable onPress={() => navigation.navigate("Add")} style={styles.addButton}>
             <Text>Add</Text>
         </Pressable>
         
@@ -43,5 +43,12 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 200,
         objectFit: 'cover'
+    },
+    addButton:{
+        padding:20,
+        backgroundColor:'green',
+        borderRadius:12,
+        justifyContent:'center',
+        alignItems:'center',
     }
 })

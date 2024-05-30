@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import AddScreen from './screens/AddScreen';
 
-
+// image picker install plus plugin https://docs.expo.dev/versions/latest/sdk/imagepicker/
 
 const Stack = createNativeStackNavigator();
 
