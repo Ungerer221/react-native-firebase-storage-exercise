@@ -1,5 +1,8 @@
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytes, getMetadata } from "firebase/storage";
 import { storage } from "../firebase";
+import { getStorage, } from "firebase/storage";
+import { createMemory } from "./database";
+
 
 // TODO: Upload Image to Buckets
 export const handleLoadOfImage = async (uri, fileName) => {
@@ -25,4 +28,6 @@ export const handleLoadOfImage = async (uri, fileName) => {
     blob.close()
 
     console.log(await getDownloadURL(imageRef)) // <-- return the url of the image on firebase
+
+    const savedMemory = await createMemory("Images", { name: fileName, link: await getDownloadURL(imageRef) })
 }

@@ -29,8 +29,11 @@ const AddScreen = () => {
 
     // this is calling out service 
     const uploadImage = async () => {
-        await handleLoadOfImage(image, title) // choose the image and then write the title 
+        await handleUploadImage(image, title) // choose the image and then write the title 
+        navigation.navigate("Home")
     }
+
+
 
 
     return (
